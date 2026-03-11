@@ -73,21 +73,32 @@ export default function HighLevelTab({
       {activeMedia?.type === "pdf" && (
         <div className="fixed inset-0 z-50 bg-black/50 flex flex-col">
           {/* Top bar */}
-          <div className="flex items-center justify-between bg-gray-900 px-4 py-2">
+          <div className="flex items-center justify-between bg-gray-900 px-4 py-3 shrink-0">
             <span className="text-sm text-white font-medium">Investor Pitch Deck</span>
-            <button
-              onClick={() => setActiveMedia(null)}
-              className="bg-white/10 hover:bg-white/20 text-white rounded-full p-1.5 transition-colors"
-            >
-              <X className="w-4 h-4" />
-            </button>
+            <div className="flex items-center gap-3">
+              <a
+                href={activeMedia.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-gray-400 hover:text-white transition-colors"
+              >
+                Open original
+              </a>
+              <button
+                onClick={() => setActiveMedia(null)}
+                className="bg-white/10 hover:bg-white/20 text-white rounded-full p-1.5 transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
           </div>
-          {/* PDF iframe full area */}
+          {/* PDF via Google Docs Viewer — scroll, zoom, download, print, save to Drive */}
           <iframe
             key={activeMedia.src}
-            src={activeMedia.src}
+            src={`https://docs.google.com/gview?url=${encodeURIComponent(activeMedia.src)}&embedded=true`}
             className="flex-1 w-full bg-white"
             title="Investor Pitch Deck"
+            allow="autoplay"
           />
         </div>
       )}
