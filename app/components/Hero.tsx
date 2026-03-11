@@ -3,8 +3,7 @@
 import { StrategyKey } from "../data";
 
 export default function Hero({ strategyKey }: { strategyKey: StrategyKey }) {
-  const isSpot = strategyKey === "sigma-1x";
-  const label = isSpot ? "Spot" : "Derivatives";
+  const label = strategyKey === "sigma-1x" ? "Spot" : strategyKey === "sigma-2x" ? "Derivatives" : "1x vs 2x";
 
   return (
     <section className="relative h-48 md:h-56 overflow-hidden">

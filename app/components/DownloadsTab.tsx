@@ -18,6 +18,14 @@ const downloadsByStrategy: Record<
     { name: "Sigma 2x KSP Analysis", type: "MD", href: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/downloads/sigma-2x-ksp.md" },
     { name: "Sigma 2x Thesis", type: "DOCX", href: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/downloads/sigma-2x-thesis.docx" },
   ],
+  "both": [
+    { name: "Sigma 1x Trader Guide", type: "MD", href: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/downloads/sigma-1x-trader-guide.md" },
+    { name: "Sigma 2x Trader Guide", type: "MD", href: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/downloads/sigma-2x-trader-guide.md" },
+    { name: "Sigma 1x KSP Analysis", type: "MD", href: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/downloads/sigma-1x-ksp.md" },
+    { name: "Sigma 2x KSP Analysis", type: "MD", href: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/downloads/sigma-2x-ksp.md" },
+    { name: "Sigma 1x Thesis", type: "MD", href: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/downloads/sigma-1x-thesis.md" },
+    { name: "Sigma 2x Thesis", type: "DOCX", href: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/downloads/sigma-2x-thesis.docx" },
+  ],
 };
 
 export default function DownloadsTab({

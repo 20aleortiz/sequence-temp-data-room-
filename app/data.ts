@@ -113,6 +113,63 @@ export const strategies = {
       { name: "Manual kill switch", desc: "Instant shutdown from the dashboard" },
     ],
   },
+  "both": {
+    id: "both",
+    name: "Compare: 1x vs 2x",
+    tagline: "Side-by-Side — Spot vs Derivatives",
+    description:
+      "A direct comparison of both Sigma strategies. See how the conservative spot approach (1x) and the leveraged derivatives strategy (2x) complement each other in a diversified portfolio.",
+    type: "Comparison",
+    direction: "Long only (1x) + Bidirectional (2x)",
+    leverage: "None (1x) / 2x isolated (2x)",
+    market: "Spot + Derivatives",
+    liquidationRisk: "Zero (1x) / Zero in backtest (2x)",
+    coins: ["DOGE", "ADA", "XRP", "ETH", "SOL"],
+    timeframe: "1-hour candles",
+    backtestPeriod: "2019–2026",
+    allYearsProfitable: true,
+    status: "Paper Trading (since Mar 7, 2026)",
+    recommendedCapital: "$10,000+ (1x) / $100,000+ (2x)",
+    stats: {
+      winRate: "94–99%",
+      sharpe: "1.45–3.31",
+      maxDrawdown: "2.8–9.0%",
+      profitFactor: "2.26–12.99",
+      totalTrades: "~55,000+",
+    },
+    perCoin: [
+      { coin: "DOGE", totalReturn: "+228.6% (1x)", maxDD: "2.8% (1x)", sharpe: "2.59 / 2.27", winRate: "97.1% / 99.0%", profitFactor: "3.72" },
+      { coin: "ADA", totalReturn: "+211.1% (1x)", maxDD: "6.9% / 4.2%", sharpe: "2.81 / 1.84", winRate: "98.2% / 98.5%", profitFactor: "5.27" },
+      { coin: "XRP", totalReturn: "+265.4% (1x)", maxDD: "3.2%", sharpe: "3.31 / 1.58", winRate: "99.4% / 99.3%", profitFactor: "7.45" },
+      { coin: "ETH", totalReturn: "+88.3% (1x)", maxDD: "3.7%", sharpe: "2.41 / 1.47", winRate: "94.4% / 98.8%", profitFactor: "2.26" },
+      { coin: "SOL", totalReturn: "+115.8% (1x)", maxDD: "3.2%", sharpe: "2.95 / 1.45", winRate: "96.3% / 99.1%", profitFactor: "2.71 / 11.55" },
+    ],
+    liveData: {
+      pnl30d: "—",
+      trades30d: "—",
+      amountTrading: "—",
+      minFunds: "$10,000+ / $100,000+",
+    },
+    backtestBars: [
+      { label: "Sigma 1x (6.7yr)", value: "+265.4%", barPercent: 63 },
+      { label: "Sigma 2x (4.2yr)", value: "+421%",   barPercent: 95 },
+      { label: "1x (12m)",         value: "+42.5%",   barPercent: 35 },
+      { label: "2x (12m)",         value: "+30%",     barPercent: 25 },
+    ],
+    media: {
+      intro: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-intro.mp4",
+      explainer: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-explainer.mp4",
+      podcast: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-podcast.m4a",
+      pitch: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-pitch.pdf",
+    },
+    safetyLayers: [
+      { name: "Per-trade stop-loss", desc: "Hard maximum loss on every trade (both strategies)" },
+      { name: "Multi-confirmation entry", desc: "4-confirmation (1x) + regime detection (2x)" },
+      { name: "Capital limits", desc: "Reserve always held back; diversified across coins" },
+      { name: "Circuit breakers", desc: "Auto-reduce → pause → full halt on losses" },
+      { name: "Manual kill switch", desc: "Instant shutdown from the dashboard" },
+    ],
+  },
 } as const;
 
 export type StrategyKey = keyof typeof strategies;

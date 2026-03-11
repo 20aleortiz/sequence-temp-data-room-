@@ -44,6 +44,16 @@ export default function Home() {
             >
               2x
             </button>
+            <button
+              onClick={() => { setActiveStrategy("both"); setActiveTab("high-level"); }}
+              className={`px-3 py-1 rounded text-xs font-medium transition-all ${
+                activeStrategy === "both"
+                  ? "bg-emerald-500 text-white"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              Compare
+            </button>
           </div>
         </div>
         <p className="text-sm text-gray-500 leading-relaxed max-w-3xl">
