@@ -92,13 +92,12 @@ export default function HighLevelTab({
               </button>
             </div>
           </div>
-          {/* PDF via Google Docs Viewer — scroll, zoom, download, print, save to Drive */}
+          {/* PDF via native browser viewer */}
           <iframe
             key={activeMedia.src}
-            src={`https://docs.google.com/gview?url=${encodeURIComponent(activeMedia.src)}&embedded=true`}
+            src={activeMedia.src}
             className="flex-1 w-full bg-white"
             title="Investor Pitch Deck"
-            allow="autoplay"
           />
         </div>
       )}
