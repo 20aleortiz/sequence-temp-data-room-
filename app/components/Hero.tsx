@@ -70,10 +70,12 @@ export default function Hero({ strategyKey }: { strategyKey: StrategyKey }) {
       </div>
 
       {/* Tag */}
-      <div className="relative z-10 h-full flex items-end p-6">
-        <span className="bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
-          {label}
-        </span>
+      <div className="relative z-10 h-full flex items-end">
+        <div className="max-w-5xl mx-auto w-full px-6 pb-6">
+          <span className="bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+            {label}
+          </span>
+        </div>
       </div>
     </section>
   );
