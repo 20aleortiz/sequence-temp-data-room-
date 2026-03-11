@@ -35,5 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# source media (only public/ copies go to git)
+# source media and docs (hosted on Supabase CDN)
 /media/
+/sigma 1 and 2/
