@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import { Play, FileText, Headphones, X } from "lucide-react";
 import { strategies, StrategyKey } from "../data";
 
@@ -30,17 +30,7 @@ export default function HighLevelTab({
   const isActive = (type: string, src: string) =>
     activeMedia?.type === type && activeMedia.src === src;
 
-  // Close PDF overlay on Escape key
-  const handleEscape = useCallback((e: KeyboardEvent) => {
-    if (e.key === "Escape" && activeMedia?.type === "pdf") {
-      setActiveMedia(null);
-    }
-  }, [activeMedia]);
 
-  useEffect(() => {
-    document.addEventListener("keydown", handleEscape);
-    return () => document.removeEventListener("keydown", handleEscape);
-  }, [handleEscape]);
 
   return (
     <div className="space-y-6">
@@ -83,15 +73,8 @@ export default function HighLevelTab({
       )}
 
       {activeMedia?.type === "pdf" && (
-        <div
-          className="fixed inset-0 z-50 bg-black/60 flex flex-col"
-          onClick={() => setActiveMedia(null)}
-        >
-          {/* Top bar */}
-          <div
-            className="flex items-center justify-between bg-gray-900 px-4 py-3 shrink-0"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="relative rounded-xl overflow-hidden bg-white shadow-sm">
+          <div className="flex items-center justify-between bg-gray-900 px-4 py-2.5">
             <span className="text-sm text-white font-medium">Investor Pitch Deck</span>
             <div className="flex items-center gap-3">
               <a
@@ -109,28 +92,25 @@ export default function HighLevelTab({
               </button>
             </div>
           </div>
-          {/* PDF via <object> — stays in page, no top-frame navigation */}
-          <div className="flex-1 mx-4 mb-4 overflow-hidden rounded-lg" onClick={(e) => e.stopPropagation()}>
-            <object
-              key={activeMedia.src}
-              data={`${activeMedia.src}#toolbar=1&navpanes=0&view=FitH`}
-              type="application/pdf"
-              className="w-full h-full bg-white"
-            >
-              {/* Fallback if browser can't embed PDF */}
-              <div className="flex flex-col items-center justify-center h-full bg-white p-10 text-center">
-                <FileText className="w-16 h-16 text-gray-300 mb-4" />
-                <p className="text-gray-600 mb-2">Unable to display PDF in browser</p>
-                <a
-                  href={activeMedia.src}
-                  download
-                  className="text-cyan-600 hover:text-cyan-500 font-medium text-sm"
-                >
-                  Download Investor Pitch Deck (PDF)
-                </a>
-              </div>
-            </object>
-          </div>
+          <object
+            key={activeMedia.src}
+            data={`${activeMedia.src}#toolbar=1&navpanes=0&view=FitH`}
+            type="application/pdf"
+            className="w-full bg-white"
+            style={{ height: "500px" }}
+          >
+            <div className="flex flex-col items-center justify-center p-10 text-center" style={{ height: "500px" }}>
+              <FileText className="w-16 h-16 text-gray-300 mb-4" />
+              <p className="text-gray-600 mb-2">Unable to display PDF in browser</p>
+              <a
+                href={activeMedia.src}
+                download
+                className="text-cyan-600 hover:text-cyan-500 font-medium text-sm"
+              >
+                Download Investor Pitch Deck (PDF)
+              </a>
+            </div>
+          </object>
         </div>
       )}
 
