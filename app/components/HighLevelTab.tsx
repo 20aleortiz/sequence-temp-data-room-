@@ -94,7 +94,7 @@ export default function HighLevelTab({
           </div>
           <object
             key={activeMedia.src}
-            data={`${activeMedia.src}#toolbar=1&navpanes=0&view=FitH`}
+            data={`${activeMedia.src}#toolbar=1&navpanes=0&zoom=30`}
             type="application/pdf"
             className="w-full bg-white"
             style={{ height: "500px" }}
