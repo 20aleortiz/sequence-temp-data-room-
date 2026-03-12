@@ -58,7 +58,7 @@ export default function CompareTab({ strategyKey }: { strategyKey: StrategyKey }
           <div className="flex items-center justify-end gap-1.5 mt-3">
             <span className="text-[10px] text-gray-400">Powered By</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-2" />
           </div>
           <a
             href="/strategy/sigma-1x"
@@ -94,7 +94,7 @@ export default function CompareTab({ strategyKey }: { strategyKey: StrategyKey }
           <div className="flex items-center justify-end gap-1.5 mt-3">
             <span className="text-[10px] text-gray-400">Powered By</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-2" />
           </div>
           <a
             href="/strategy/sigma-2x"

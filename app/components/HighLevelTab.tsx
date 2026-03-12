@@ -129,7 +129,7 @@ export default function HighLevelTab({
           <div className="flex items-center justify-end gap-1.5 mt-3">
             <span className="text-[10px] text-gray-400">Powered By</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-2" />
           </div>
         </div>
 
@@ -149,7 +149,7 @@ export default function HighLevelTab({
           <div className="flex items-center justify-end gap-1.5 mt-3">
             <span className="text-[10px] text-gray-400">Powered By</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-2" />
           </div>
         </div>
 
@@ -169,7 +169,7 @@ export default function HighLevelTab({
           <div className="flex items-center justify-end gap-1.5 mt-3">
             <span className="text-[10px] text-gray-400">Powered By</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-2" />
           </div>
         </div>
 
@@ -189,7 +189,7 @@ export default function HighLevelTab({
           <div className="flex items-center justify-end gap-1.5 mt-3">
             <span className="text-[10px] text-gray-400">Powered By</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-2" />
           </div>
         </div>
       </div>
