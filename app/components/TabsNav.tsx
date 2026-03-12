@@ -2,20 +2,22 @@
 
 type Tab = "high-level" | "trade-data" | "compare" | "downloads";
 
-const tabs: { id: Tab; label: string; count?: number }[] = [
-  { id: "high-level", label: "High Level", count: 4 },
-  { id: "trade-data", label: "Trade Data" },
-  { id: "compare", label: "Compare" },
-  { id: "downloads", label: "Downloads", count: 3 },
-];
-
 export default function TabsNav({
   activeTab,
   onSwitch,
+  downloadsCount,
 }: {
   activeTab: Tab;
   onSwitch: (t: Tab) => void;
+  downloadsCount: number;
 }) {
+  const tabs: { id: Tab; label: string; count?: number }[] = [
+    { id: "high-level", label: "High Level", count: 4 },
+    { id: "trade-data", label: "Trade Data" },
+    { id: "compare", label: "Compare" },
+    { id: "downloads", label: "Downloads", count: downloadsCount },
+  ];
+
   return (
     <div className="flex gap-8 border-b border-gray-200 mt-6">
       {tabs.map((tab) => (

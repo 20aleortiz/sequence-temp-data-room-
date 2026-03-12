@@ -55,7 +55,11 @@ export default function CompareTab({ strategyKey }: { strategyKey: StrategyKey }
             <Play className="w-8 h-8 text-gray-400 mb-3" />
             <p className="text-sm text-gray-700 font-medium">Video Explainer</p>
           </div>
-          <p className="text-xs text-gray-400 text-right mt-3">By Notebook LM</p>
+          <div className="flex items-center justify-end gap-1.5 mt-3">
+            <span className="text-[10px] text-gray-400">Powered By</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+          </div>
           <a
             href="/strategy/sigma-1x"
             className="block w-full mt-4 text-sm text-center py-2.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg transition-colors font-medium"
@@ -87,7 +91,11 @@ export default function CompareTab({ strategyKey }: { strategyKey: StrategyKey }
             <Play className="w-8 h-8 text-gray-400 mb-3" />
             <p className="text-sm text-gray-700 font-medium">Video Explainer</p>
           </div>
-          <p className="text-xs text-gray-400 text-right mt-3">By Notebook LM</p>
+          <div className="flex items-center justify-end gap-1.5 mt-3">
+            <span className="text-[10px] text-gray-400">Powered By</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+          </div>
           <a
             href="/strategy/sigma-2x"
             className="block w-full mt-4 text-sm text-center py-2.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg transition-colors font-medium"

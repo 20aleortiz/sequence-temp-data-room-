@@ -7,7 +7,7 @@ import TabsNav from "../../components/TabsNav";
 import HighLevelTab from "../../components/HighLevelTab";
 import TradeDataTab from "../../components/TradeDataTab";
 import CompareTab from "../../components/CompareTab";
-import DownloadsTab from "../../components/DownloadsTab";
+import DownloadsTab, { downloadsByStrategy } from "../../components/DownloadsTab";
 
 type Tab = "high-level" | "trade-data" | "compare" | "downloads";
 
@@ -42,7 +42,7 @@ export default function StrategyPage({ params }: { params: { id: string } }) {
 
       {/* Tabs */}
       <div className="max-w-5xl mx-auto px-6">
-        <TabsNav activeTab={activeTab} onSwitch={setActiveTab} />
+        <TabsNav activeTab={activeTab} onSwitch={setActiveTab} downloadsCount={downloadsByStrategy[strategyKey].length} />
 
         <div className="mt-6 pb-20">
           {activeTab === "high-level" && <HighLevelTab strategyKey={strategyKey} />}

@@ -126,7 +126,11 @@ export default function HighLevelTab({
             <Play className="w-8 h-8 text-gray-400 mb-3" />
             <p className="text-sm text-gray-700 font-medium">Video Intro</p>
           </div>
-          <p className="text-xs text-gray-400 text-right mt-3">By Notebook LM</p>
+          <div className="flex items-center justify-end gap-1.5 mt-3">
+            <span className="text-[10px] text-gray-400">Powered By</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+          </div>
         </div>
 
         {/* Deep Dive */}
@@ -142,7 +146,11 @@ export default function HighLevelTab({
             <Play className="w-8 h-8 text-gray-400 mb-3" />
             <p className="text-sm text-gray-700 font-medium">Video Explainer</p>
           </div>
-          <p className="text-xs text-gray-400 text-right mt-3">By Notebook LM</p>
+          <div className="flex items-center justify-end gap-1.5 mt-3">
+            <span className="text-[10px] text-gray-400">Powered By</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+          </div>
         </div>
 
         {/* Podcast */}
@@ -158,7 +166,11 @@ export default function HighLevelTab({
             <Headphones className="w-8 h-8 text-gray-400 mb-3" />
             <p className="text-sm text-gray-700 font-medium">Audio Overview</p>
           </div>
-          <p className="text-xs text-gray-400 text-right mt-3">By Notebook LM</p>
+          <div className="flex items-center justify-end gap-1.5 mt-3">
+            <span className="text-[10px] text-gray-400">Powered By</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+          </div>
         </div>
 
         {/* Power Point (Pitch Deck) */}
@@ -174,7 +186,11 @@ export default function HighLevelTab({
             <FileText className="w-8 h-8 text-gray-400 mb-3" />
             <p className="text-sm text-gray-700 font-medium">Investor Pitch Deck</p>
           </div>
-          <p className="text-xs text-gray-400 text-right mt-3">By Notebook LM</p>
+          <div className="flex items-center justify-end gap-1.5 mt-3">
+            <span className="text-[10px] text-gray-400">Powered By</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-3" />
+          </div>
         </div>
       </div>
 

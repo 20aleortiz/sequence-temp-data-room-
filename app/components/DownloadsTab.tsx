@@ -3,7 +3,7 @@
 import { Download } from "lucide-react";
 import { StrategyKey } from "../data";
 
-const downloadsByStrategy: Record<
+export const downloadsByStrategy: Record<
   StrategyKey,
   { name: string; type: string; href: string }[]
 > = {
