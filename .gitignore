@@ -38,3 +38,4 @@ next-env.d.ts
 # source media and docs (hosted on Supabase CDN)
 /media/
 /sigma 1 and 2/
+/decrypt/
