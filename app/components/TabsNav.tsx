@@ -1,10 +1,11 @@
 "use client";
 
-type Tab = "high-level" | "trade-data" | "downloads";
+type Tab = "high-level" | "trade-data" | "compare" | "downloads";
 
 const tabs: { id: Tab; label: string; count?: number }[] = [
-  { id: "high-level", label: "High Level", count: 3 },
+  { id: "high-level", label: "High Level", count: 4 },
   { id: "trade-data", label: "Trade Data" },
+  { id: "compare", label: "Compare" },
   { id: "downloads", label: "Downloads", count: 3 },
 ];
 
