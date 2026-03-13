@@ -45,7 +45,6 @@ export const strategies = {
     media: {
       intro: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-1x-intro.mp4",
       explainer: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-1x-explainer.mp4",
-      podcast: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-1x-podcast.m4a",
       pitch: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-1x-pitch.pdf",
     },
     safetyLayers: [
@@ -102,7 +101,6 @@ export const strategies = {
     media: {
       intro: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-2x-intro.mp4",
       explainer: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-2x-explainer.mp4",
-      podcast: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-2x-podcast.m4a",
       pitch: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-2x-pitch.pdf",
     },
     safetyLayers: [
@@ -159,7 +157,6 @@ export const strategies = {
     media: {
       intro: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-intro.mp4",
       explainer: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-explainer.mp4",
-      podcast: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-podcast.m4a",
       pitch: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-pitch.pdf",
     },
     safetyLayers: [

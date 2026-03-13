@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Play, FileText, Headphones, X } from "lucide-react";
+import { Play, FileText, X } from "lucide-react";
 import { strategies, StrategyKey } from "../data";
 
 type ActiveMedia =
   | { type: "video"; src: string }
-  | { type: "audio"; src: string }
   | { type: "pdf"; src: string }
   | null;
 
@@ -46,25 +45,6 @@ export default function HighLevelTab({
             controls
             autoPlay
             className="w-full max-h-[400px]"
-          />
-        </div>
-      )}
-
-      {activeMedia?.type === "audio" && (
-        <div className="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-          <button
-            onClick={() => setActiveMedia(null)}
-            className="bg-gray-100 hover:bg-gray-200 rounded-full p-1.5 transition-colors"
-          >
-            <X className="w-4 h-4 text-gray-500" />
-          </button>
-          <Headphones className="w-5 h-5 text-cyan-500" />
-          <audio
-            key={activeMedia.src}
-            src={activeMedia.src}
-            controls
-            autoPlay
-            className="flex-1"
           />
         </div>
       )}
@@ -111,8 +91,8 @@ export default function HighLevelTab({
         </div>
       )}
 
-      {/* Row 1: Four individual media cards */}
-      <div className="grid grid-cols-2 gap-4">
+      {/* Row 1: Three media cards centered */}
+      <div className="grid grid-cols-3 gap-4">
         {/* Introduction */}
         <div className="bg-white rounded-xl p-5 shadow-sm">
           <div
@@ -153,27 +133,7 @@ export default function HighLevelTab({
           </div>
         </div>
 
-        {/* Podcast */}
-        <div className="bg-white rounded-xl p-5 shadow-sm">
-          <div
-            onClick={() => toggle({ type: "audio", src: s.media.podcast })}
-            className={`bg-gray-100 rounded-lg flex flex-col items-center justify-center text-center p-8 min-h-[160px] transition-colors cursor-pointer ${
-              isActive("audio", s.media.podcast)
-                ? "ring-2 ring-cyan-500 bg-gray-200"
-                : "hover:bg-gray-200"
-            }`}
-          >
-            <Headphones className="w-8 h-8 text-gray-400 mb-3" />
-            <p className="text-sm text-gray-700 font-medium">Audio Overview</p>
-          </div>
-          <div className="flex items-center justify-end gap-1.5 mt-3">
-            <span className="text-[10px] text-gray-400">Powered By</span>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-2" />
-          </div>
-        </div>
-
-        {/* Power Point (Pitch Deck) */}
+        {/* Investor Pitch Deck */}
         <div className="bg-white rounded-xl p-5 shadow-sm">
           <div
             onClick={() => toggle({ type: "pdf", src: s.media.pitch })}

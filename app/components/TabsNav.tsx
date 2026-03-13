@@ -12,7 +12,7 @@ export default function TabsNav({
   downloadsCount: number;
 }) {
   const tabs: { id: Tab; label: string; count?: number }[] = [
-    { id: "high-level", label: "High Level", count: 4 },
+    { id: "high-level", label: "High Level", count: 3 },
     { id: "trade-data", label: "Trade Data" },
     { id: "compare", label: "Compare" },
     { id: "downloads", label: "Downloads", count: downloadsCount },
