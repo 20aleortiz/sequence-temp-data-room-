@@ -151,13 +151,13 @@ export const strategies = {
     backtestBars: [
       { label: "Sigma 1x (6.7yr)", value: "+265.4%", barPercent: 63 },
       { label: "Sigma 2x (4.2yr)", value: "+421%",   barPercent: 95 },
-      { label: "1x (12m)",         value: "+42.5%",   barPercent: 35 },
-      { label: "2x (12m)",         value: "+30%",     barPercent: 25 },
+      { label: "Sigma 1x (12m)",    value: "+42.5%",   barPercent: 35 },
+      { label: "Sigma 2x (12m)",    value: "+30%",     barPercent: 25 },
     ],
     media: {
-      intro: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-intro.mp4",
-      explainer: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-explainer.mp4",
-      pitch: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/both-sigma-pitch.pdf",
+      intro: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/compare-intro.mp4",
+      explainer: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/compare-explainer.mp4",
+      pitch: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/compare-pitch.pdf",
     },
     safetyLayers: [
       { name: "Per-trade stop-loss", desc: "Hard maximum loss on every trade (both strategies)" },
