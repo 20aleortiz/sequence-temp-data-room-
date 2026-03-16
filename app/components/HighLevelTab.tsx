@@ -91,29 +91,9 @@ export default function HighLevelTab({
         </div>
       )}
 
-      {/* Row 1: Three media cards centered */}
-      <div className="grid grid-cols-3 gap-4">
-        {/* Introduction */}
-        <div className="bg-white rounded-xl p-5 shadow-sm">
-          <div
-            onClick={() => toggle({ type: "video", src: s.media.intro })}
-            className={`bg-gray-100 rounded-lg flex flex-col items-center justify-center text-center p-8 min-h-[160px] transition-colors cursor-pointer ${
-              isActive("video", s.media.intro)
-                ? "ring-2 ring-cyan-500 bg-gray-200"
-                : "hover:bg-gray-200"
-            }`}
-          >
-            <Play className="w-8 h-8 text-gray-400 mb-3" />
-            <p className="text-sm text-gray-700 font-medium">Video Intro</p>
-          </div>
-          <div className="flex items-center justify-end gap-1.5 mt-3">
-            <span className="text-[10px] text-gray-400">Powered By</span>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/notebooklm-logo.png" alt="NotebookLM" className="h-2" />
-          </div>
-        </div>
-
-        {/* Deep Dive */}
+      {/* Row 1: Two media cards */}
+      <div className="grid grid-cols-2 gap-4">
+        {/* Video Explainer */}
         <div className="bg-white rounded-xl p-5 shadow-sm">
           <div
             onClick={() => toggle({ type: "video", src: s.media.explainer })}

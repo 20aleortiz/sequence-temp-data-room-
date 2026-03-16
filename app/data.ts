@@ -43,7 +43,6 @@ export const strategies = {
       { label: "6m",          value: "+18.2%",  barPercent: 25 },
     ],
     media: {
-      intro: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-1x-intro.mp4",
       explainer: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-1x-explainer.mp4",
       pitch: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-1x-pitch.pdf",
     },
@@ -99,7 +98,6 @@ export const strategies = {
       { label: "3m",          value: "+8%",    barPercent: 12 },
     ],
     media: {
-      intro: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-2x-intro.mp4",
       explainer: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-2x-explainer.mp4",
       pitch: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/sigma-2x-pitch.pdf",
     },
@@ -155,7 +153,6 @@ export const strategies = {
       { label: "Sigma 2x (12m)",    value: "+30%",     barPercent: 25 },
     ],
     media: {
-      intro: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/compare-intro.mp4",
       explainer: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/compare-explainer.mp4",
       pitch: "https://kwtagyeqhdxswpztqcsa.supabase.co/storage/v1/object/public/data-room/media/compare-pitch.pdf",
     },
